@@ -1,5 +1,4 @@
 # FriendFinder
-FriendFinder
 
 Friend Finder is an mathc.com alternate. As a use your will fill in your name, provide a link to your photo and answer few questions.
 
