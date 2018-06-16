@@ -199,11 +199,17 @@
                 }).then(function (res) {
                     console.log(res);
                     if (res.closest === "") {
+                        $("#exampleModalLabel").text("Hey First visitor");
                         $(".modal-body").text("Welcome to our dating site. You are our first visitor. We will notify you as soon as we find a good match");
                         $("#exampleModal").modal('show');
                     } else {
-                        $(".modal-body").text(res.closest);
-                        $("#imagepreview").attr("src", res.photo); // here asign the image to the modal when the user click the enlarge link
+                        $("#exampleModalLabel").text("Your Best Match is..");
+                        $(".modal-body").empty();
+                        $(".modal-body").append("<p>" + res.closest + "</p>");
+                        var img = $("<img>");
+                        img.attr("src", res.photo);
+                        img.attr("style", "width: 300px; height: 264px;");
+                        $(".modal-body").append(img);
                         $("#exampleModal").modal('show');
                     }
 
