@@ -64,5 +64,8 @@ function calculateDelta(scores1, scores2) {
 // Photo rendering in modal
 // URL Validation
 // Heroku Setup
+// Portfolio update
+// Submit in BCS
+// README.md
 
 module.exports = app;
