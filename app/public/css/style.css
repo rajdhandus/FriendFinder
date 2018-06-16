@@ -1,7 +1,7 @@
-input.invalid {
+.invalid {
   border: 2px solid red;
 }
 
-input.valid {
+.valid {
   border: 2px solid green;
 }

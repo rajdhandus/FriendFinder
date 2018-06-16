@@ -21,10 +21,11 @@ app.post("/api/friends", function(req, res) {
     }
   }
 
-  var friendVar = actions.addAFriend(name, imgURL, scores);
   console.log(friendVar);
-  // res.send(actions.addAFriend(name, imgURL, scores));
   var closestFriend = calculateClosedFriend(scores);
+
+  var friendVar = actions.addAFriend(name, imgURL, scores);
+
   var responseJSON = {
     closest: closestFriend
   };
@@ -57,5 +58,11 @@ function calculateDelta(scores1, scores2) {
   }
   return diff;
 }
+
+// TODO
+// Green and Red highlight based on inputs
+// Photo rendering in modal
+// URL Validation
+// Heroku Setup
 
 module.exports = app;
